@@ -82,6 +82,9 @@ textarea {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+  border: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -289,6 +292,7 @@ textarea {
   z-index: 1;
   transition: opacity 250ms linear, visibility 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 16px;
 }
 .hero-backdrop.is-hidden {
   opacity: 0;
@@ -303,8 +307,7 @@ textarea {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 392px;
-  height: 584px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -313,6 +316,7 @@ textarea {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   padding: 24px 16px;
+  width: 90%;
 }
 .modal-button-position {
   display: flex;
@@ -348,8 +352,8 @@ textarea {
   color: var(--title-text-color);
   margin-bottom: 16px;
 }
+
 .form {
-  width: 360px;
 }
 .form-container {
   margin-bottom: 8px;
@@ -366,14 +370,14 @@ textarea {
   color: #8e8f99;
 }
 .form-input {
-  width: 360px;
   height: 40px;
-
+  display: flex;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   color: #2e2f42;
   outline: transparent;
   padding: 8px 38px;
+  width: 100%;
 }
 .form-input:is(:focus) {
   border: 1px solid #4d5ae5;
@@ -392,7 +396,8 @@ textarea {
 .form-input:is(:focus) + .form-icon {
   fill: var(--accent-color);
 }
-
+.form-textarea {
+}
 .textarea-label {
   display: flex;
   margin-bottom: 4px;
@@ -403,7 +408,6 @@ textarea {
   color: #8e8f99;
 }
 .teaxarea-input {
-  width: 100%;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   height: 120px;
@@ -412,6 +416,8 @@ textarea {
   color: #2e2f42;
   outline: transparent;
   resize: none;
+
+  width: 100%;
 }
 .teaxarea-input:focus {
   border: 1px solid #4d5ae5;
@@ -555,20 +561,20 @@ textarea {
   align-items: center;
   justify-content: center;
 }
-
+.our-team-item {
+  padding-bottom: 32px;
+}
 .fourth-section-item {
   background-color: #ffffff;
-  padding-bottom: 32px;
 
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   border-radius: 0px 0px 4px 4px;
-  flex-basis: 100%;
 }
 .fourth-section-img {
-  margin-bottom: 32px;
+  padding-bottom: 32px;
 }
 .title-team {
   color: var(--title-text-color);
@@ -856,38 +862,39 @@ textarea {
 /** -----------PORTFOLIO---------- */
 /** portfolio section */
 .portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .portfolio-nav {
-  margin-bottom: 72px;
+  margin-bottom: 48px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   align-items: center;
-  gap: 24px;
+  gap: 16px 24px;
+  width: 268px;
 }
 /**portfolio button  */
+.button-portfolio-item {
+}
 .button-portfolio {
+  padding: 8px 16px;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 24px;
+
   background-color: var(--logo-footer);
   color: var(--button-portfolio-color);
+  justify-content: center;
+  align-items: center;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
-  border: 1px solid #e7e9fc;
-  border-radius: 4px;
 
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   transition: background-color 250ms linear, color 250ms linear,
     box-shadow 250ms linear, border-color 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -910,15 +917,17 @@ textarea {
 .work-portfolio {
   display: flex;
   align-items: center;
-  gap: 48px 24px;
+  gap: 48px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .work-portfolio-list {
-  border: 1px solid #e7e9fc;
-  width: calc((100% - 48px) / 3);
   display: flex;
+  flex-wrap: wrap;
+
+  border: 1px solid #e7e9fc;
+
   justify-content: center;
   border-top: none;
   transition: box-shadow 250ms linear;
@@ -933,7 +942,9 @@ textarea {
 .work-portfolio-link:is(:hover, :focus) .portfolio-bcg-text {
   transform: translateY(0%);
 }
-
+.work-container {
+  padding: 32px 16px;
+}
 .work-portfolio .title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -941,8 +952,6 @@ textarea {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-  padding-left: 16px;
-  padding-top: 32px;
 }
 
 .work-portfolio .text {
@@ -950,10 +959,9 @@ textarea {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-left: 16px;
-  padding-bottom: 32px;
 }
 .work-portfolio-img {
+  width: 396px;
 }
 .portfolio-img-backgroun {
   position: relative;
@@ -984,11 +992,16 @@ textarea {
   .container {
     max-width: 428px;
   }
+  .work-portfolio-list {
+  }
+  .hero-modal {
+    width: 392px;
+  }
 }
 /**TABLET */
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 768px) {
   .container {
-    max-width: 798px;
+    max-width: 768px;
   }
   body {
     padding-top: 72px;
@@ -1209,9 +1222,34 @@ textarea {
   .button-footer-container {
     margin: 0;
   }
+  /**Portfolio */
+  .portfolio-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .portfolio-nav {
+    margin-bottom: 64px;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+  .button-portfolio {
+    padding: 12px 24px;
+  }
+
+  .work-portfolio {
+    gap: 78px 24px;
+
+    justify-content: start;
+  }
+  .work-portfolio-list {
+    width: 356px;
+  }
+  .work-portfolio-img {
+  }
 }
 
-@media screen and (min-width: 798px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .fourth-section > .container {
     max-width: 582px;
   }
@@ -1347,5 +1385,16 @@ textarea {
   }
   .input-footer {
     opacity: 1;
+  }
+  /**Portfolio */
+  .portfolio-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+  .portfolio-nav {
+    margin-bottom: 72px;
+  }
+  .work-portfolio {
+    gap: 48px 24px;
   }
 }
