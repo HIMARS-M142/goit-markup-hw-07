@@ -207,7 +207,7 @@ textarea {
 }
 .modal-header .contacts-item:first-child .contacts-link {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 1.11;
 
   letter-spacing: 0.02em;
@@ -215,7 +215,8 @@ textarea {
   color: #4d5ae5;
 }
 .modal-header .our-team-list {
-  gap: 56px;
+  gap: 30px;
+  justify-content: start;
 }
 
 /** hero section */
@@ -442,10 +443,10 @@ textarea {
   margin-bottom: 24px;
 }
 .checkbox-label {
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.17;
   display: flex;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   align-items: center;
   color: #8e8f99;
 }
@@ -467,10 +468,6 @@ textarea {
 .privacy-policy {
   color: #4d5ae5;
 
-  font-size: 12px;
-  line-height: 1.33;
-
-  letter-spacing: 0.04em;
   margin-left: 4px;
   transition: color linear 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -564,6 +561,7 @@ textarea {
 }
 .our-team-item {
   padding-bottom: 32px;
+  padding-top: 32px;
 }
 .fourth-section-item {
   background-color: #ffffff;
@@ -574,9 +572,7 @@ textarea {
 
   border-radius: 0px 0px 4px 4px;
 }
-.fourth-section-img {
-  padding-bottom: 32px;
-}
+
 .title-team {
   color: var(--title-text-color);
   font-size: 36px;
@@ -871,9 +867,8 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: center;
   gap: 16px 24px;
-  width: 268px;
+  width: 270px;
 }
 /**portfolio button  */
 .button-portfolio-item {
@@ -949,7 +944,7 @@ textarea {
 .work-portfolio .title {
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
@@ -993,10 +988,26 @@ textarea {
   .container {
     max-width: 428px;
   }
-  .work-portfolio-list {
+  /**header */
+  .modal-header .contacts-item:first-child .contacts-link {
+    font-size: 36px;
   }
+  .modal-header .our-team-list {
+    gap: 56px;
+  }
+
+  /**Hero */
   .hero-modal {
     width: 392px;
+  }
+  .checkbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.04em;
+  }
+  .work-portfolio .title {
+    font-size: 20px;
   }
 }
 /**TABLET */
@@ -1117,11 +1128,13 @@ textarea {
 
   .contacts-link {
     color: #434455;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding-top: 24px;
-    padding-bottom: 24px;
+
+    font-size: 12px;
+    line-height: 1.17px;
+    /* identical to box height, or 117% */
+
+    letter-spacing: 0.04em;
+
     transition: color 250ms linear;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -1277,6 +1290,15 @@ textarea {
     display: flex;
     flex-direction: row;
     gap: 40px;
+  }
+  .contacts-link {
+    color: #434455;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /**Hero section */
