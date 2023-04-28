@@ -62,7 +62,7 @@
             </li>
           </ul>
         </address>
-        <button type="button" data-menu-open class="menu-icon-container">
+        <button type="button" data-menus-open class="menu-icon-container">
           <svg class="header-menu-icon" width="32" height="32">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -70,9 +70,9 @@
       </div>
       <!-- Modal Header -->
 
-      <div class="modal-header is-hidden" data-menu>
+      <div class="modal-header is-hidden" data-menus>
         <div>
-          <button type="button" data-menu-close class="modal-button">
+          <button type="button" data-menus-close class="modal-button">
             <svg class="backdrop-icon" width="8" height="8">
               <use href="./images/icons.svg#icon-vector"></use>
             </svg>
@@ -86,13 +86,13 @@
 
               <li class="header-modal-item">
                 <a href="./portfolio.html" class="header-link link"
-                  >Portfolio</a
+                  ><span class="current">Portfolio</span></a
                 >
               </li>
 
               <li class="header-modal-item">
                 <a href="" class="header-link link"
-                  ><span class="current">Contacts</span>
+                  >Contacts
                 </a>
               </li>
             </ul>
@@ -399,6 +399,7 @@
         </form>
       </div>
     </footer>
+    <script src="./js/portfolio.js"></script>
      <script src="./js/modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
